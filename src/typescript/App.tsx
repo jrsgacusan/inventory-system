@@ -1,5 +1,5 @@
 import Image from '../images/random.png';
-import ClickCounter from './components/ClickCounter';
+import ClickCounter from './commonComponents/clickCounter';
 
 const App = () => {
   const test = 'asdasd';
