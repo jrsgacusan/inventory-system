@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/jrsgacusan/inventory-system#readme",
   "dependencies": {
+    "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.9",
     "@mui/styled-engine-sc": "^5.10.6",
     "loadable-components": "^2.2.3",
