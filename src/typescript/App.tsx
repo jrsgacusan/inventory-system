@@ -1,12 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
-import BooksPage from './pages/booksPage';
-import LoginPage from './pages/loginPage';
+import BooksPage from './pages/BooksPage';
+import LoginPage from './pages/LoginPage';
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<LoginPage />} />
-      <Route path="books" element={<BooksPage />} />
+      <Route path="/dashboard" element={<BooksPage />} />
     </Routes>
   );
 };
