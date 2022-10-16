@@ -21,12 +21,19 @@ const S = {
     flex-direction: row;
   `,
   LoginElements: styled.div`
-    flex: 1;
-    padding: 10px;
+    width: 100%;
+
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media ${device.laptop} {
+      width: 50%;
+    }
   `,
   ImageContainer: styled('div')`
     background-color: black;
-    flex: 1;
+    width: 50%;
     height: 100%;
     display: none;
     overflow: hidden;

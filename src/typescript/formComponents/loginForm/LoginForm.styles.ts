@@ -4,7 +4,9 @@ const S = {
   LoginForm: styled.form`
     display: flex;
     flex-direction: column;
-    row-gap: 15px;
+    width: 100%;
+    text-align: center;
+    row-gap: 10px;
   `,
 };
 

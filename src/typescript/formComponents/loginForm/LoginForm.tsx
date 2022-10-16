@@ -1,5 +1,4 @@
-import { Button } from '@mui/material';
-import { Box } from '@mui/system';
+import { Button, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import FormInput from '../components/FormInput';
 import { VALIDATIONS } from '../constants/validationRules';
@@ -27,27 +26,31 @@ const LoginForm = () => {
 
   return (
     <S.LoginForm onSubmit={onSubmit} name="loginForm">
+      <Typography variant="h2" sx={{ marginBottom: '20px' }}>
+        Login
+      </Typography>
       <FormInput
-        label="First Name"
-        placeHolder="First Name"
-        validation={VALIDATIONS.firstName}
+        type="email"
+        label="Email"
+        placeHolder="Email"
+        validation={VALIDATIONS.email}
         control={control}
         errors={errors}
-        name="firstName"
+        name="email"
       />
       <FormInput
-        label="Last Name"
-        placeHolder="Last Name"
+        label="Password"
+        placeHolder="Password"
         validation={VALIDATIONS.lastName}
         control={control}
         errors={errors}
-        name="lastName"
+        name="password"
+        type="password"
       />
-      <Box>
-        <Button variant="contained" type="submit" disabled={!isEmpty(errors)} size="large">
-          Submit
-        </Button>
-      </Box>
+      <Typography sx={{ margin: '0 0 10px 0', textAlign: 'right' }}>Forgot password?</Typography>
+      <Button variant="contained" type="submit" disabled={!isEmpty(errors)} size="large">
+        Submit
+      </Button>
     </S.LoginForm>
   );
 };

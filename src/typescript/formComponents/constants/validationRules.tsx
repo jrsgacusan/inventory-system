@@ -32,7 +32,7 @@ export const VALIDATIONS: ValidationObject = {
     required: 'Email is required',
     pattern: {
       value: emailPattern,
-      message: 'Test',
+      message: 'Invalid email',
     },
   },
 };

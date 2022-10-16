@@ -1,2 +1,2 @@
-export const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/;
+export const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 export const namePattern = /^[^<>%!"£$&*() ]+[^<>%!"£$&*()]{0,25}$/;

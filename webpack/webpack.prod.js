@@ -1,7 +1,5 @@
 const webpack = require('webpack');
 const path = require('path');
-// const BundleAnalyzerPlugin =
-//   require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const OptimizeCssPlugin = require('optimize-css-assets-webpack-plugin');
@@ -16,7 +14,6 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.name': JSON.stringify('Prod'),
     }),
-    // new BundleAnalyzerPlugin(),
     new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '..', './src/index.html'),
@@ -30,6 +27,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '..', './build'),
     filename: '[name].[contenthash].bundle.js',
+    publicPath: '/',
   },
   module: {
     rules: [
