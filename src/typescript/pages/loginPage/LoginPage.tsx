@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import LoginForm from '../../formComponents/loginForm/LoginForm';
+import SignupForm from '../../formComponents/signupForm/SignupForm';
 import S from './LoginPage.styles';
 
 const LoginPage = () => {
@@ -9,6 +10,7 @@ const LoginPage = () => {
         <S.LoginElements>
           <Routes>
             <Route path="sign-in" element={<LoginForm />} />
+            <Route path="sign-up" element={<SignupForm />} />
             <Route path="*" element={<Navigate to="sign-in" />} />
             <Route path="/" element={<Navigate to="sign-in" />} />
           </Routes>

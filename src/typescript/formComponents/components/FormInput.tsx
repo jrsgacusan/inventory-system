@@ -15,7 +15,6 @@ interface Props {
 }
 
 const FormInput = ({ control, name, defaultValue = '', validation, errors, fullWidth = false, placeHolder, label, type }: Props) => {
-  console.log(errors);
   return (
     <Controller
       name={name}
@@ -24,7 +23,7 @@ const FormInput = ({ control, name, defaultValue = '', validation, errors, fullW
       defaultValue={defaultValue}
       render={({ field }) => (
         <TextField
-          InputLabelProps={{ title: 'test', htmlFor: name }}
+          InputLabelProps={{ htmlFor: name }}
           helperText={(errors[name]?.message as string) ?? <>&nbsp;</>}
           InputProps={{ id: name }}
           error={!!errors[name]}

@@ -10,7 +10,7 @@ export const VALIDATIONS: ValidationObject = {
     required: 'First name is required',
     maxLength: {
       value: 25,
-      message: 'First name max length is 25.',
+      message: 'First name max length is 25',
     },
     pattern: {
       value: namePattern,
@@ -21,7 +21,7 @@ export const VALIDATIONS: ValidationObject = {
     required: 'Last name is required',
     maxLength: {
       value: 25,
-      message: 'First name max length is 25.',
+      message: 'Last name max length is 25',
     },
     pattern: {
       value: namePattern,
@@ -34,5 +34,14 @@ export const VALIDATIONS: ValidationObject = {
       value: emailPattern,
       message: 'Invalid email',
     },
+  },
+  title: {
+    required: 'Required',
+  },
+  password: {
+    required: 'Password is required',
+  },
+  retypePassword: {
+    required: 'Retype password',
   },
 };

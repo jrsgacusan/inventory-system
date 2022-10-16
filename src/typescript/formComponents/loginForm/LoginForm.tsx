@@ -4,25 +4,27 @@ import FormInput from '../components/FormInput';
 import { VALIDATIONS } from '../constants/validationRules';
 import { isEmpty } from 'lodash';
 import S from './LoginForm.styles';
+import { useNavigate } from 'react-router-dom';
 
-interface RegistrationFormFields {
-  firstName: string;
+interface LoginFormFields {
+  email: string;
+  password: string;
 }
 
 const LoginForm = () => {
+  const navigate = useNavigate();
+
   const {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm<RegistrationFormFields>({
+  } = useForm<LoginFormFields>({
     mode: 'onBlur',
   });
 
   const onSubmit = handleSubmit((data) => {
     console.log('submitting...', data);
   });
-
-  console.log(errors);
 
   return (
     <S.LoginForm onSubmit={onSubmit} name="loginForm">
@@ -49,7 +51,11 @@ const LoginForm = () => {
       />
       <Typography sx={{ margin: '0 0 10px 0', textAlign: 'right' }}>Forgot password?</Typography>
       <Button variant="contained" type="submit" disabled={!isEmpty(errors)} size="large">
-        Submit
+        SIGN IN NOW
+      </Button>
+      <Typography>or</Typography>
+      <Button variant="outlined" type="button" size="large" color="secondary" onClick={() => navigate('/auth/sign-up')}>
+        CREATE AN ACCOUNT
       </Button>
     </S.LoginForm>
   );
